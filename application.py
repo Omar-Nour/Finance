@@ -36,11 +36,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("postgres://ihxilvkhipakrg:11e3ca314cbb0afa4f0d7a16676010c4d346a8bbda8744a1fe598eb7b133f844@ec2-54-246-87-132.eu-west-1.compute.amazonaws.com:5432/detjh626dgckoo")
 
-# Make sure API key is set
-if not api_key:
-    raise RuntimeError("API_KEY not set")
-
-
 @app.route("/")
 @login_required
 def index():
